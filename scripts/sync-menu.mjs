@@ -93,7 +93,7 @@ export async function syncMenu({ url = process.env.GOOGLE_SHEETS_CSV_URL, fetchI
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   syncMenu().then((result) => {
-    console.log(result.skipped ? 'Menu sync: no sheet configured; keeping bundled data.' : `Menu sync: published ${result.count} items.`);
+    console.log(result.skipped ? 'Menu sync: extended menu-import' : `Menu sync: published ${result.count} items.`);
   }).catch((error) => {
     console.error(`Menu sync failed: ${error.message}`);
     process.exitCode = 1;

@@ -1,0 +1,19 @@
+id,name,description,category,price_usd,price_khr,tags,available
+margherita,Margherita,"San Marzano tomato, fior di latte, fresh basil and extra virgin olive oil.",Pizza,8,,Vegetarian|Classic,TRUE
+funghi,Funghi,"Roasted mushrooms, mozzarella, thyme and a delicate truffle finish.",Pizza,10,,Vegetarian,TRUE
+frutti-di-mare,Frutti di Mare,"Prawns, squid and mussels with tomato, garlic and parsley.",Pizza,14,,Seafood,TRUE
+diavola,Diavola,"Spicy salami, tomato, mozzarella and a touch of chili honey.",Pizza,11,,Spicy,TRUE
+prosciutto-rucola,Prosciutto & Rucola,"Prosciutto, peppery rocket, shaved parmesan and mozzarella.",Pizza,13,,,TRUE
+burrata,Burrata & Tomatoes,"Creamy burrata, ripe tomatoes, basil oil and toasted sourdough.",Small plates,7,,Vegetarian,TRUE
+arancini,Mushroom Arancini,Golden risotto bites with parmesan and roasted garlic aioli.,Small plates,6,,Vegetarian,TRUE
+calamari,Crispy Calamari,"Lightly fried squid, lemon and house-made herb mayonnaise.",Small plates,7,,Seafood,TRUE
+olives,Warm Marinated Olives,"Mixed olives warmed with citrus peel, rosemary and garlic.",Small plates,4,,Vegan,TRUE
+negroni,House Negroni,"Gin, bitter aperitivo and sweet vermouth, stirred over ice.",Cocktails,7,,,TRUE
+passionfruit-spritz,Passionfruit Spritz,"Passionfruit, sparkling wine and soda with a bright citrus finish.",Cocktails,7,,,TRUE
+espresso-martini,Espresso Martini,"Vodka, coffee liqueur and a freshly pulled espresso.",Cocktails,8,,,TRUE
+house-red,House Red · Glass,"A generous, fruit-forward red selected to pair with our pizza.",Wine,5,,,TRUE
+house-white,House White · Glass,"Fresh and crisp, with citrus notes and a clean finish.",Wine,5,,,TRUE
+prosecco,Prosecco · Glass,"Fine bubbles, orchard fruit and a lively, dry finish.",Wine,6,,,TRUE
+espresso,Espresso,A rich double shot with a rounded finish.,Coffee & more,2,,,TRUE
+iced-latte,Iced Latte,"Double espresso and chilled milk, served over ice.",Coffee & more,3,,,TRUE
+lime-soda,Fresh Lime Soda,"Freshly squeezed lime, sparkling water and a hint of sugar.",Coffee & more,2,,,Alcohol-free,TRUE

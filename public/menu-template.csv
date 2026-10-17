@@ -16,4 +16,7 @@ house-white,House White · Glass,"Fresh and crisp, with citrus notes and a clean
 prosecco,Prosecco · Glass,"Fine bubbles, orchard fruit and a lively, dry finish.",Wine,6,,,TRUE
 espresso,Espresso,A rich double shot with a rounded finish.,Coffee & more,2,,,TRUE
 iced-latte,Iced Latte,"Double espresso and chilled milk, served over ice.",Coffee & more,3,,,TRUE
-lime-soda,Fresh Lime Soda,"Freshly squeezed lime, sparkling water and a little sweetness.",Coffee & more,2.5,,Alcohol-free,TRUE
+earl-grey,Early Grey Tea,"Bright and fragrant single-origin black tea",Coffee & more,2,,,TRUE
+lime-soda,Fresh Lime Soda,"Freshly squeezed lime, sparkling water and a hint of sugar.",Coffee & more,2,,,TRUE
+tomato-basil,"Tomato & Basil Neapolitan","Classic toppings of tomato and basil with olive oil drizzle.",Pizza,9,36000,Classic|Vegan|Kosher,TRUE
+white-pizza,"4-Cheese White Pizza","A blend of parmesan, ricotta, fior-milk mozzarella, gruyere.",Pizza,13,52000,Veg,TRUE

@@ -25,12 +25,13 @@ export function RestaurantMenu() {
       <div className="menu-intro"><span>{category === "Pizza" ? "NEAPOLITAN AT HEART" : category.toUpperCase()}</span><span>{category === "Pizza" ? "A blistered crust. A soft centre. Simple pleasures." : "Find your new favourite."}</span></div>
       <div className="menu-grid" aria-live="polite" aria-atomic="true">
         {items.length ? items.map((item) => <article className="menu-item" key={item.id}>
-          <div className="dish-heading"><h3>{item.name}</h3><div className="dish-price"><strong>{usd.format(item.priceUsd)}</strong><span>{khr.format(item.priceKhr)} ៛</span></div></div>
+          <div className="dish-heading"><h3>{item.name}</h3><div className="dish-price"><strong>{item.priceUsd} <span className="small">USD</span></strong></div></div>
           <p>{item.description}</p>
           {item.tags.length > 0 && <div className="dish-tags">{item.tags.map((tag) => <span key={tag}>{tag.toLowerCase() === "vegetarian" && <Leaf size={12} aria-hidden="true" />}{tag}</span>)}</div>}
         </article>) : <p className="menu-empty">We’re refreshing this part of the menu. Call us to discover today’s selection.</p>}
       </div>
-      <div className="menu-footnote"><p>Prices in US dollars & Cambodian riel.<br />Riel conversions are indicative at $1 = {khr.format(menu.exchangeRate)} ៛ unless individually set. Please let us know about allergies.</p><a className="text-link" href={restaurant.phoneHref}>Something special in mind? <ArrowUpRight size={16} /></a></div>
+      <div className="menu-footnote">
+        <a className="text-link" href={restaurant.phoneHref}>Something special in mind? <ArrowUpRight size={16} /></a></div>
     </section>
   );
 }

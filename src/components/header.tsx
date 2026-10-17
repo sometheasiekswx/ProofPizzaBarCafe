@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { asset, restaurant } from "@/lib";
+import { restaurant } from "@/lib";
 
 export function Header() {
   const [open, setOpen] = useState(false);

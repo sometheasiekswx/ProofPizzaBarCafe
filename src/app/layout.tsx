@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { DM_Sans, Cormorant_Garamond, Noto_Sans_Khmer } from "next/font/google";
 import { basePath } from "@/lib";
-import "./globals.css";
+import "./design.css";
+import { SmoothScroll } from "@/components/smooth-scroll";
 
 const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const serif = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500", "600"], style: ["normal", "italic"], variable: "--font-serif", display: "swap" });
 const khmer = Noto_Sans_Khmer({ subsets: ["khmer"], weight: "400", variable: "--font-khmer", display: "swap" });
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sometheasiekswx.github.io";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Proof Pizza Bar & Cafe | Neapolitan Pizza in Kep, Cambodia",
@@ -18,5 +20,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={`${sans.variable} ${serif.variable} ${khmer.variable}`}><a className="skip-link" href="#main">Skip to content</a>{children}</body></html>;
+  return (
+    <html lang="en">
+      <body className={`${sans.variable} ${serif.variable} ${khmer.variable}`}>
+        <a className="skip-link" href="#main">Skip to content</a>
+        {children}
+        <SmoothScroll />
+      </body>
+    </html>
+  );
 }
