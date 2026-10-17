@@ -1,0 +1,188 @@
+{
+  "source": "sample",
+  "updatedAt": null,
+  "exchangeRate": 4000,
+  "items": [
+    {
+      "id": "margherita",
+      "name": "Margherita",
+      "description": "San Marzano tomato, fior di latte, fresh basil and extra virgin olive oil.",
+      "category": "Pizza",
+      "priceUsd": 8,
+      "priceKhr": 32000,
+      "tags": [
+        "Vegetarian",
+        "Classic"
+      ]
+    },
+    {
+      "id": "funghi",
+      "name": "Funghi",
+      "description": "Roasted mushrooms, mozzarella, thyme and a delicate truffle finish.",
+      "category": "Pizza",
+      "priceUsd": 10,
+      "priceKhr": 40000,
+      "tags": [
+        "Vegetarian"
+      ]
+    },
+    {
+      "id": "frutti-di-mare",
+      "name": "Frutti di Mare",
+      "description": "Prawns, squid and mussels with tomato, garlic and parsley.",
+      "category": "Pizza",
+      "priceUsd": 14,
+      "priceKhr": 56000,
+      "tags": [
+        "Seafood"
+      ]
+    },
+    {
+      "id": "diavola",
+      "name": "Diavola",
+      "description": "Spicy salami, tomato, mozzarella and a touch of chili honey.",
+      "category": "Pizza",
+      "priceUsd": 11,
+      "priceKhr": 44000,
+      "tags": [
+        "Spicy"
+      ]
+    },
+    {
+      "id": "prosciutto-rucola",
+      "name": "Prosciutto & Rucola",
+      "description": "Prosciutto, peppery rocket, shaved parmesan and mozzarella.",
+      "category": "Pizza",
+      "priceUsd": 13,
+      "priceKhr": 52000,
+      "tags": []
+    },
+    {
+      "id": "burrata",
+      "name": "Burrata & Tomatoes",
+      "description": "Creamy burrata, ripe tomatoes, basil oil and toasted sourdough.",
+      "category": "Small plates",
+      "priceUsd": 7,
+      "priceKhr": 28000,
+      "tags": [
+        "Vegetarian"
+      ]
+    },
+    {
+      "id": "arancini",
+      "name": "Mushroom Arancini",
+      "description": "Golden risotto bites with parmesan and roasted garlic aioli.",
+      "category": "Small plates",
+      "priceUsd": 6,
+      "priceKhr": 24000,
+      "tags": [
+        "Vegetarian"
+      ]
+    },
+    {
+      "id": "calamari",
+      "name": "Crispy Calamari",
+      "description": "Lightly fried squid, lemon and house-made herb mayonnaise.",
+      "category": "Small plates",
+      "priceUsd": 7,
+      "priceKhr": 28000,
+      "tags": [
+        "Seafood"
+      ]
+    },
+    {
+      "id": "olives",
+      "name": "Warm Marinated Olives",
+      "description": "Mixed olives warmed with citrus peel, rosemary and garlic.",
+      "category": "Small plates",
+      "priceUsd": 4,
+      "priceKhr": 16000,
+      "tags": [
+        "Vegan"
+      ]
+    },
+    {
+      "id": "negroni",
+      "name": "House Negroni",
+      "description": "Gin, bitter aperitivo and sweet vermouth, stirred over ice.",
+      "category": "Cocktails",
+      "priceUsd": 7,
+      "priceKhr": 28000,
+      "tags": []
+    },
+    {
+      "id": "passionfruit-spritz",
+      "name": "Passionfruit Spritz",
+      "description": "Passionfruit, sparkling wine and soda with a bright citrus finish.",
+      "category": "Cocktails",
+      "priceUsd": 7,
+      "priceKhr": 28000,
+      "tags": []
+    },
+    {
+      "id": "espresso-martini",
+      "name": "Espresso Martini",
+      "description": "Vodka, coffee liqueur and a freshly pulled espresso.",
+      "category": "Cocktails",
+      "priceUsd": 8,
+      "priceKhr": 32000,
+      "tags": []
+    },
+    {
+      "id": "house-red",
+      "name": "House Red · Glass",
+      "description": "A generous, fruit-forward red selected to pair with our pizza.",
+      "category": "Wine",
+      "priceUsd": 5,
+      "priceKhr": 20000,
+      "tags": []
+    },
+    {
+      "id": "house-white",
+      "name": "House White · Glass",
+      "description": "Fresh and crisp, with citrus notes and a clean finish.",
+      "category": "Wine",
+      "priceUsd": 5,
+      "priceKhr": 20000,
+      "tags": []
+    },
+    {
+      "id": "prosecco",
+      "name": "Prosecco · Glass",
+      "description": "Fine bubbles, orchard fruit and a lively, dry finish.",
+      "category": "Wine",
+      "priceUsd": 6,
+      "priceKhr": 24000,
+      "tags": []
+    },
+    {
+      "id": "espresso",
+      "name": "Espresso",
+      "description": "A rich double shot with a rounded finish.",
+      "category": "Coffee & more",
+      "priceUsd": 2,
+      "priceKhr": 8000,
+      "tags": []
+    },
+    {
+      "id": "iced-latte",
+      "name": "Iced Latte",
+      "description": "Double espresso and chilled milk, served over ice.",
+      "category": "Coffee & more",
+      "priceUsd": 3,
+      "priceKhr": 12000,
+      "tags": []
+    },
+    {
+      "id": "lime-soda",
+      "name": "Fresh Lime Soda",
+      "description": "Freshly squeezed lime, sparkling water and a little sweetness.",
+      "category": "Coffee & more",
+      "priceUsd": 2.5,
+      "priceKhr": 10000,
+      "tags": [
+        "Alcohol-free"
+      ]
+    }
+  ]
+}
