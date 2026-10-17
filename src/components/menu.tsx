@@ -6,8 +6,6 @@ import menu from "@/data/menu.json";
 import { restaurant } from "@/lib";
 
 const categories = ["Pizza", "Small plates", "Cocktails", "Wine", "Coffee & more"];
-const usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 2 });
-const khr = new Intl.NumberFormat("en-US");
 
 export function RestaurantMenu() {
   const [category, setCategory] = useState("Pizza");
@@ -18,8 +16,9 @@ export function RestaurantMenu() {
         <div><p className="eyebrow">MADE TO BE SHARED. OR NOT.</p><h2 id="menu-heading">Good things.<br /><em>No shortcuts.</em></h2></div>
         <p>A little Naples. A little Kep. A menu for long lunches, another round, and one more slice.</p>
       </div>
-      {menu.source === "sample" && <p className="sample-note">A taste of what’s to come — this is an illustrative menu. Dishes and prices are awaiting the owner’s confirmation.</p>}
+      {menu.source === "sample" && <p className="sample-note">A taste of what’s to come. Dishes and prices might be slightly different from what’s listed here.</p>}
       <div className="menu-filters" role="group" aria-label="Menu categories">
+        
         {categories.map((name, i) => <button key={name} aria-pressed={category === name} onClick={() => setCategory(name)}><span className="category-number">0{i + 1}</span>{name}</button>)}
       </div>
       <div className="menu-intro"><span>{category === "Pizza" ? "NEAPOLITAN AT HEART" : category.toUpperCase()}</span><span>{category === "Pizza" ? "A blistered crust. A soft centre. Simple pleasures." : "Find your new favourite."}</span></div>
