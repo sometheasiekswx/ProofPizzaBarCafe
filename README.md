@@ -14,6 +14,8 @@ npm run dev
 
 Open http://localhost:3000. VS Code includes `dev`, `build`, and `check` tasks (Terminal → Run Task). Changes hot-reload.
 
+For phone testing on the same Wi-Fi, open http://192.168.50.210:3000. This LAN address is explicitly permitted by `allowedDevOrigins` in [next.config.ts](next.config.ts). If the computer’s IP changes, update that entry and restart the dev server. Next.js blocks unapproved development origins, which can leave the page visible but its controls unresponsive. Reload the phone’s page after changing the configuration.
+
 - `src/app/page.tsx`: homepage content and sections
 - `src/app/globals.css`: design tokens, layout and responsive styles
 - `src/components/menu.tsx`: menu category controls and currency display
