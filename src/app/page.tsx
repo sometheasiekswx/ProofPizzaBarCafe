@@ -21,7 +21,15 @@ export default function Home() {
         <div className="coastal-invitation">
           <div className="invitation-main">
             <p className="invitation-title">Your table.<br /><em>No hurry.</em></p>
-            <div className="invitation-bottom"><span>Pizza. Coffee. Cocktails.</span><span>Good company encouraged.</span></div>
+            <div className="invitation-bottom">
+              <div className="ticket-stickers" aria-hidden="true">
+                <Image className="ticket-sticker" src={asset("/images/proof-cover.jpg")} alt="" width={72} height={48} />
+                <Image className="ticket-sticker" src={asset("/images/pizza.jpg")} alt="" width={72} height={48} />
+                <Image className="ticket-sticker" src={asset("/images/storefront-horizontal.webp")} alt="" width={72} height={48} />
+                <Image className="ticket-sticker ticket-sticker-seal" src={asset("/images/proof-logo-alternative.jpg")} alt="" width={48} height={48} />
+              </div>
+              <span>Pizza. Coffee. Cocktails.</span><span>Good company encouraged.</span>
+            </div>
           </div>
           <div className="invitation-stub">
             <span className="invitation-mark" aria-hidden="true">p.</span>

@@ -67,7 +67,17 @@ svg { flex-shrink: 0; stroke-width: 1.5; }
 .invitation-main { padding: clamp(32px, 5vw, 72px); display: flex; flex-direction: column; justify-content: space-between; gap: 48px; }
 .invitation-title { font-size: clamp(56px, 7.5vw, 96px); line-height: .98; letter-spacing: -.04em; font-weight: 500; }
 .invitation-title em { font-family: var(--font-serif), serif; font-weight: 400; }
-.invitation-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; font-size: 12px; }
+.invitation-bottom { position: relative; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; font-size: 12px; }
+.ticket-stickers { position: absolute; bottom: calc(100% + 7px); right: 0; display: flex; align-items: center; gap: 10px; pointer-events: none; }
+.ticket-sticker { display: block; width: 54px; height: 32px; object-fit: cover; border: 3px solid var(--surface); outline: 1px dashed var(--surface); outline-offset: 1px; transform: rotate(-8deg); }
+.ticket-sticker:nth-child(2) { transform: rotate(7deg); }
+.ticket-sticker:nth-child(3) { transform: rotate(-4deg); }
+.ticket-sticker-seal { width: 32px; border-radius: 50%; transform: rotate(12deg); }
+@media (max-width: 1100px) {
+  .ticket-stickers { bottom: calc(100% + 5px); gap: 8px; }
+  .ticket-sticker { width: 36px; height: 22px; border-width: 2px; }
+  .ticket-sticker-seal { width: 22px; }
+}
 .invitation-stub { position: relative; padding: 32px; border-left: 1px dashed var(--inverse-muted); display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
 .invitation-stub::before, .invitation-stub::after { content: ""; position: absolute; left: -13px; width: 24px; height: 24px; border-radius: 50%; background: var(--surface); }
 .invitation-stub::before { top: -12px; }
