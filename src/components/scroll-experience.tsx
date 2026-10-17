@@ -10,11 +10,6 @@ export function ScrollExperience() {
   useEffect(() => {
     const media = gsap.matchMedia();
     media.add("(min-width: 900px) and (min-height: 650px) and (prefers-reduced-motion: no-preference)", () => {
-      // Existing animations
-      gsap.to(".hero-image img", {
-        yPercent: 12, scale: 1.12, ease: "none",
-        scrollTrigger: { trigger: ".hero-image", start: "top bottom", end: "bottom top", scrub: 0.7 },
-      });
       const timeline = gsap.timeline({
         scrollTrigger: { trigger: ".craft-section", start: "top 64px", end: "+=900", pin: true, scrub: 0.6, invalidateOnRefresh: true },
       });

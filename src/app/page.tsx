@@ -18,10 +18,16 @@ export default function Home() {
           <div className="hero-actions"><a className="button" href="#menu">Explore the menu <ArrowUpRight size={18} /></a><a className="text-link" href="#visit">Come find us <ArrowUpRight size={16} /></a></div>
           <div className="hero-bottom"><p><span className="status-dot" /> OPEN DAILY <span className="hours">11 AM — 9 PM</span></p><a href="#our-story" aria-label="Discover our story"><ArrowDown size={20} /></a></div>
         </div>
-        <div className="hero-image">
-          <Image src={asset("/images/proof-cover.jpg")} alt="Illustrative artisan pizza with a blistered crust, fresh basil and tomato" fill sizes="(max-width: 760px) 100vw, 55vw" priority />
-          <div className="image-shade" />
-          <span className="photo-caption">Illustrative photography</span>
+        <div className="coastal-invitation">
+          <div className="invitation-main">
+            <p className="invitation-title">Your table.<br /><em>No hurry.</em></p>
+            <div className="invitation-bottom"><span>Pizza. Coffee. Cocktails.</span><span>Good company encouraged.</span></div>
+          </div>
+          <div className="invitation-stub">
+            <span className="invitation-mark" aria-hidden="true">p.</span>
+            <div><p className="invitation-place">A little Naples.<br />A little Kep.</p><p className="invitation-address">Find us near Kep Main Beach.</p></div>
+            <a className="invitation-link" href="#visit">Meet us here <ArrowUpRight size={22} /></a>
+          </div>
         </div>
       </section>
       <div className="manifesto-strip"><span>Neapolitan pizza. Coffee. Cocktails.</span><span>The slow life, well lived.</span></div>
