@@ -2,6 +2,12 @@
 
 A responsive Next.js website for Proof in Kep, Cambodia. Static export for GitHub Pages, with a public Google Sheets menu fetched at build time. No server, paid CMS, API key, tracking, or customer database required.
 
+## Halden design branch
+
+The `halden` branch explores an original warm-paper and red editorial direction inspired by the [Halden reference](https://www.getlayers.ai/layer/halden). It includes oversized typography, a photographic hero, animated red menu-category bands, restrained hover interactions, and reduced-motion alternatives. The existing Sheets CMS and deployment configuration are unchanged. Pushes to `halden` do not deploy the production site; open a pull request to `main` when ready for review.
+
+See [the design brief](docs/halden-design-prompt.md). Current pizza photography remains illustrative; no reference-site images or proprietary copy were reused.
+
 ## Develop
 
 Use Node 22 (`nvm use`) or a newer supported Node version.

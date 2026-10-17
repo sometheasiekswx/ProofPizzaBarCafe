@@ -1,16 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { asset, restaurant } from "@/lib";
+import { restaurant } from "@/lib";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="site-header">
       <a className="brand" href="#home" aria-label="Proof — home" onClick={() => setOpen(false)}>
-        {/* <Image src={asset("/images/proof-logo.jpg")} alt="Proof Pizza Bar & Cafe" width={66} height={66} priority /> */}
         <span className="brand-type">proof<span>PIZZA · BAR · CAFÉ</span></span>
       </a>
       <button className="nav-toggle" aria-expanded={open} aria-controls="navigation" aria-label={open ? "Close navigation" : "Open navigation"} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
