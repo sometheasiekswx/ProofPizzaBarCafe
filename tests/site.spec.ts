@@ -30,6 +30,21 @@ test("all menu categories show the expected items and both currencies", async ({
   }
 });
 
+test("mobile menu categories are visible without horizontal scrolling", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 740 });
+  await page.goto("./#menu");
+  for (const category of ["Pizza", "Small plates", "Cocktails", "Wine", "Coffee & more"]) {
+    const button = page.getByRole("button", { name: category, exact: true });
+    const box = await button.boundingBox();
+    expect(box).not.toBeNull();
+    expect(box!.x).toBeGreaterThanOrEqual(0);
+    expect(box!.x + box!.width).toBeLessThanOrEqual(320);
+    await button.click();
+    await expect(button).toHaveAttribute("aria-pressed", "true");
+    await expect(page.locator(".menu-item")).toHaveCount(menu.items.filter(item => item.category === category).length);
+  }
+});
+
 test("navigation and contact links work", async ({ page, isMobile }) => {
   await page.goto("./");
   if (isMobile) {

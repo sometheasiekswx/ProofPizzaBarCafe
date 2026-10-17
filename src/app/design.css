@@ -192,6 +192,8 @@ svg { flex-shrink: 0; stroke-width: 1.5; }
   .craft-photo { min-height: 320px; }
   .section-heading { flex-direction: column; align-items: flex-start; gap: 24px; }
   .section-heading>p { max-width: none; }
+  .menu-filters { flex-wrap: wrap; overflow-x: visible; }
+  .menu-filters button { padding-inline: 16px; }
   .menu-grid { grid-template-columns: 1fr; min-height: 0; }
   .menu-intro { flex-direction: column; gap: 4px; }
   .aperitivo { grid-template-columns: 1fr; gap: 48px; }
