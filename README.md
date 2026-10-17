@@ -62,7 +62,7 @@ NEXT_PUBLIC_BASE_PATH=/ProofPizzaBarCafe npm run test:e2e
 NEXT_PUBLIC_BASE_PATH=/ProofPizzaBarCafe npm run preview
 ```
 
-Preview then lives at http://127.0.0.1:4173/ProofPizzaBarCafe/. The preview server binds only to localhost and is not a production server.
+Preview then lives at http://127.0.0.1:4173/ProofPizzaBarCafe/. The preview server binds only to localhost and is not a production server. It loads regular build-output files into memory at startup, skipping symbolic links; request URLs only look up that fixed snapshot and never become filesystem paths. Restart the preview after rebuilding to load changes. This is intended for this small static site, not large asset collections.
 
 ## Before announcing the site
 
