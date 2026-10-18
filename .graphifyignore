@@ -1,0 +1,8 @@
+# Index project code and documentation, excluding bundled tools and media.
+.agents/
+.codex/
+.cursor/
+public/images/
+public/icon.svg
+package-lock.json
+skills-lock.json
