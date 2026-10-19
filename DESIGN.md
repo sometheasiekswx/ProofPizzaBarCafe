@@ -33,7 +33,7 @@ At 760px and below navigation collapses, menu and visit layouts become single-co
 [ScrollExperience](src/components/scroll-experience.tsx) owns GSAP effects and cleans them up through `gsap.matchMedia().revert()` on unmount or preference/breakpoint changes.
 
 - Only desktops at least 900px wide and 650px tall with no reduced-motion preference receive parallax and pinning.
-- Hero invitation: a static olive typographic panel replaces the illustrative hero photograph. Large sans-serif copy pairs with an italic serif accent; a perforated side stub carries the visit link. The stub stacks below the main panel on mobile. No hero image or parallax is used.
+- Hero invitation: a static olive typographic panel with a perforated visit-link stub below the centered opening copy. The stub stacks below the main panel on mobile. No floating photos or hero scroll animation.
 - Craft: one pinned 900px scroll sequence below the header; a timeline slowly enlarges the image, brings three already-readable lines into emphasis, and fills a decorative progress rule.
 - Native scrolling is never intercepted. Links and controls never wait for an animation.
 - Animate transforms and opacity, not masks, blur or layout properties. The header blur is static.
