@@ -1,11 +1,28 @@
+# Dependencies and generated Next.js output
 node_modules/
 .next/
 out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Local environment settings; keep the documented example
 .env*
 !.env.example
-*.tsbuildinfo
-next-env.d.ts
-.DS_Store
+
+# Test output and caches
 playwright-report/
 test-results/
-node_modules
+coverage/
+.eslintcache
+
+# Generated project graph and machine-specific hook configuration
+/graphify-out/
+/.codex/hooks.json
+
+# Logs, editor backups, and OS metadata
+*.log
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
