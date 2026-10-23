@@ -62,9 +62,9 @@ This is the ideal state. The project is linked and has git integration.
    trigger a deployment. Want me to proceed?
    ```
 
-2. **Commit and push:**
+2. **Commit and push:** Confirm the branch is a preview branch before pushing; a production branch push requires the user's production-deployment authorization. Stage only the intended changes.
    ```bash
-   git add .
+   git add <explicitly-selected-files>
    git commit -m "deploy: <description of changes>"
    git push
    ```
@@ -145,7 +145,7 @@ The Vercel CLI isn't set up at all.
    ```bash
    vercel login
    ```
-   The user completes auth in their browser. If running in a non-interactive environment where login is not possible, skip to the **no-auth fallback** below.
+   The user completes auth in their browser. If login is unavailable or authentication fails, stop deployment and explain the authentication issue. Do not switch to a different upload service automatically.
 
 3. **Ask which team to deploy to** — present team slugs from `vercel teams list --format json` as a bulleted list. If only one team / personal account, skip. Once selected, proceed immediately.
 
@@ -159,90 +159,9 @@ The Vercel CLI isn't set up at all.
 
 ---
 
-### No-Auth Fallback — claude.ai sandbox
+### Alternative deployment routes
 
-**When to use:** Last resort when the CLI can't be installed or authenticated in the claude.ai sandbox. This requires no authentication — it returns a **Preview URL** (live site) and a **Claim URL** (transfer to your Vercel account).
-
-```bash
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh [path]
-```
-
-**Arguments:**
-- `path` - Directory to deploy, or a `.tgz` file (defaults to current directory)
-
-**Examples:**
-```bash
-# Deploy current directory
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh
-
-# Deploy specific project
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh /path/to/project
-
-# Deploy existing tarball
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh /path/to/project.tgz
-```
-
-The script auto-detects the framework from `package.json`, packages the project (excluding `node_modules`, `.git`, `.env`), uploads it, and waits for the build to complete.
-
-**Tell the user:** "Your deployment is ready at [previewUrl]. Claim it at [claimUrl] to manage your deployment."
-
----
-
-### No-Auth Fallback — Codex sandbox
-
-**When to use:** In the Codex sandbox where the CLI may not be authenticated. Codex runs in a sandboxed environment by default — try the CLI first, and fall back to the deploy script if auth fails.
-
-1. **Check whether the Vercel CLI is installed** (no escalation needed for this check):
-   ```bash
-   command -v vercel
-   ```
-
-2. **If `vercel` is installed**, try deploying with the CLI:
-   ```bash
-   vercel deploy [path] -y --no-wait
-   ```
-
-3. **If `vercel` is not installed, or the CLI fails with "No existing credentials found"**, use the fallback script:
-   ```bash
-   skill_dir="<path-to-skill>"
-
-   # Deploy current directory
-   bash "$skill_dir/resources/deploy-codex.sh"
-
-   # Deploy specific project
-   bash "$skill_dir/resources/deploy-codex.sh" /path/to/project
-
-   # Deploy existing tarball
-   bash "$skill_dir/resources/deploy-codex.sh" /path/to/project.tgz
-   ```
-
-The script handles framework detection, packaging, and deployment. It waits for the build to complete and returns JSON with `previewUrl` and `claimUrl`.
-
-**Tell the user:** "Your deployment is ready at [previewUrl]. Claim it at [claimUrl] to manage your deployment."
-
-**Escalated network access:** Only escalate the actual deploy command if sandboxing blocks the network call (`sandbox_permissions=require_escalated`). Do **not** escalate the `command -v vercel` check.
-
----
-
-## Agent-Specific Notes
-
-### Claude Code / terminal-based agents
-
-You have full shell access. Do NOT use the `/mnt/skills/` path. Follow the decision flow above using the CLI directly.
-
-For the no-auth fallback, run the deploy script from the skill's installed location:
-```bash
-bash ~/.claude/skills/deploy-to-vercel/resources/deploy.sh [path]
-```
-The path may vary depending on where the user installed the skill.
-
-### Sandboxed environments (claude.ai)
-
-You likely cannot run `vercel login` or `git push`. Go directly to the **no-auth fallback — claude.ai sandbox**.
-
-### Codex
-
-Codex runs in a sandbox. Check if the CLI is available first, then fall back to the deploy script. Go to the **no-auth fallback — Codex sandbox**.
+Use the authenticated Vercel project and selected team by default. An authentication or network error is not authorization to upload through a no-auth service. Use a different deployment route only when the user explicitly chooses it after the destination, ownership/claim process, and files to upload are explained. Follow the active environment's permission rules.
 
 ---
 
